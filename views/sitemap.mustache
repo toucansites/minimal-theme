@@ -2,11 +2,11 @@
     {{#empty(urls)}}
     {{/empty(urls)}}
     {{^empty(urls)}}
+    {{#context.pages}}
     <url>
-        {{#context.pages}}
-            <loc>{{permalink}}</loc>
-            <lastmod>{{lastUpdate.formats.sitemap}}</lastmod>
-        {{/context.pages}}
+        <loc>{{permalink}}</loc>
+        <lastmod>{{lastUpdate.formats.sitemap}}</lastmod>
     </url>
+    {{/context.pages}}
     {{/empty(urls)}}
 </urlset>
